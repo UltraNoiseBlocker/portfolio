@@ -3,6 +3,7 @@ html {
   -webkit-animation: fadein 2s;
           animation: fadein 2s;
   scroll-behavior: smooth;
+  background-color: #2a2a2a;
 }
 
 @media (max-width: 31.25em) {
@@ -139,7 +140,36 @@ section.contact-container div.side-desc {
 }
 
 section.contact-container div.side-desc div.profile-img-container {
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
   padding-bottom: 9rem;
+}
+
+@-webkit-keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 section.contact-container div.side-desc div.profile-img-container img {
@@ -164,6 +194,25 @@ section.contact-container div.contact-main div.profile-img-container {
   width: 100%;
   display: none;
   margin-top: 3rem;
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 section.contact-container div.contact-main div.profile-img-container img {
@@ -200,16 +249,6 @@ section.contact-container div.contact-main div.profile div.profile-desc .first-n
           transform: translate(20px, 20px);
   -webkit-filter: blur(4px);
           filter: blur(4px);
-}
-
-@-webkit-keyframes flyin {
-  to {
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-    opacity: 1;
-  }
 }
 
 @keyframes flyin {
