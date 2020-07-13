@@ -4,24 +4,6 @@ $tertiaryBGColor: rgb(42, 42, 42);
 $primaryTextColor: rgb(164, 165, 166);
 $secondaryTextColor: rgb(224, 168, 13);
 
-@mixin respond($breakpoint) {
-  @if $breakpoint == phone {
-    @media (max-width: 31.25em) {
-      @content;
-    } // < 500px
-  }
-  @if $breakpoint == tablet {
-    @media (max-width: 62em) {
-      @content;
-    } // < 992px
-  }
-  @if $breakpoint == desktop {
-    @media (min-width: 112.5em) {
-      @content;
-    } // > 1800px
-  }
-}
-
 @mixin flyIn($delayTime) {
   animation: flyin 0.75s ease-in forwards;
   animation-delay: $delayTime;
@@ -54,15 +36,33 @@ $secondaryTextColor: rgb(224, 168, 13);
   }
 }
 
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 31.25em) {
+      @content;
+    } // < 500px
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 62em) {
+      @content;
+    } // < 992px
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } // > 1800px
+  }
+}
+
 html {
   font-size: 100%;
   animation: fadein 2s;
 
   @include respond(phone) {
-    font-size: 90%; // 1rem = 8px, 8/16 = 50
+    font-size: 80%; // 1rem = 8px, 8/16 = 50
   }
   @include respond(tablet) {
-    font-size: 95%; // 1rem = 9px, 9/16 = 56.25
+    font-size: 90%; // 1rem = 9px, 9/16 = 56.25
   }
   @include respond(desktop) {
     font-size: 100%; // 1 rem = 12px, 12/16 = 75

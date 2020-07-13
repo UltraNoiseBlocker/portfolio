@@ -7,13 +7,13 @@ html {
 
 @media (max-width: 31.25em) {
   html {
-    font-size: 90%;
+    font-size: 80%;
   }
 }
 
 @media (max-width: 62em) {
   html {
-    font-size: 95%;
+    font-size: 90%;
   }
 }
 
@@ -138,36 +138,7 @@ section.contact-container div.side-desc {
 }
 
 section.contact-container div.side-desc div.profile-img-container {
-  -webkit-animation: fadein 0.75s ease-in forwards;
-          animation: fadein 0.75s ease-in forwards;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-  opacity: 0;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   padding-bottom: 9rem;
-}
-
-@-webkit-keyframes fadein {
-  to {
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  to {
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
 }
 
 section.contact-container div.side-desc div.profile-img-container img {
@@ -192,25 +163,6 @@ section.contact-container div.contact-main div.profile-img-container {
   width: 100%;
   display: none;
   margin-top: 3rem;
-  -webkit-animation: fadein 0.75s ease-in forwards;
-          animation: fadein 0.75s ease-in forwards;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-  opacity: 0;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-}
-
-@keyframes fadein {
-  to {
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
 }
 
 section.contact-container div.contact-main div.profile-img-container img {

@@ -6,7 +6,7 @@
     flex-flow: row wrap;
     align-content: space-around;
     div.profile-img-container {
-      @include fadeIn(1.8s);
+      // @include fadeIn(1.8s);
       padding-bottom: 9rem;
       img {
         border-radius: 50%;
@@ -24,7 +24,7 @@
       width: 100%;
       display: none;
       margin-top: 3rem;
-      @include fadeIn(1.8s);
+      // @include fadeIn(1.8s);
       img {
         border-radius: 50%;
         width: 150px;
