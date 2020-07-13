@@ -72,6 +72,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   font-family: 'Lato';
   color: $primaryTextColor;
   margin: 0;
@@ -128,9 +129,9 @@ main {
 section {
   position: relative;
   width: 100%;
-  background-color: $tertiaryBGColor;
+  background-color: transparent;
 
-  &.alt-bg div.alt-bg {
+  &.bg-1 div.bg-1 {
     background-color: $secondaryBGColor;
   }
 
@@ -186,8 +187,12 @@ section {
   }
 }
 
-.alt-bg {
-  background-color: $secondaryBGColor;
+.bg-1 {
+  background-color: $secondaryBGColor !important;
+}
+
+.bg-2 {
+  background-color: $tertiaryBGColor !important;
 }
 
 footer {
