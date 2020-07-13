@@ -1,0 +1,736 @@
+html {
+  font-size: 100%;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 31.25em) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 62em) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-family: 'Lato';
+  color: #a4a5a6;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a,
+a:hover,
+a:active {
+  color: #a4a5a6;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+  background-color: #2e2e2e;
+  border: solid 2px #2c2c2c;
+}
+
+header ul {
+  margin: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 5rem;
+}
+
+header ul li {
+  margin-left: 2rem;
+  display: inline;
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 500px) {
+  header ul {
+    padding-right: 2rem;
+  }
+}
+
+main {
+  padding-top: 60px;
+}
+
+.anchor {
+  position: absolute;
+  top: -60px;
+  visibility: hidden;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  background-color: #2a2a2a;
+}
+
+section.alt-bg div.alt-bg {
+  background-color: #2c2c2c;
+}
+
+section div.side-bg {
+  background-color: #2e2e2e;
+}
+
+section div.sect-container {
+  padding: 10px;
+}
+
+section p {
+  font-size: 0.9rem;
+}
+
+section hr {
+  height: 1px;
+  background-color: #a4a5a6;
+}
+
+section.contact-container div.side-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+section.contact-container div.side-desc div.profile-img-container {
+  -webkit-animation: fadein 0.75s ease-in forwards;
+          animation: fadein 0.75s ease-in forwards;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  padding-bottom: 9rem;
+}
+
+@-webkit-keyframes fadein {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.side-desc div.profile-img-container img {
+  border-radius: 50%;
+  width: 200px;
+}
+
+section.contact-container div.contact-main {
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+section.contact-container div.contact-main div.profile-img-container {
+  width: 100%;
+  display: none;
+  margin-top: 3rem;
+  -webkit-animation: fadein 0.75s ease-in forwards;
+          animation: fadein 0.75s ease-in forwards;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@keyframes fadein {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.contact-main div.profile-img-container img {
+  border-radius: 50%;
+  width: 150px;
+}
+
+section.contact-container div.contact-main div.profile {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 8rem 3rem 0 3rem;
+}
+
+section.contact-container div.contact-main div.profile div.profile-desc {
+  display: inline-block;
+  text-align: left;
+}
+
+section.contact-container div.contact-main div.profile div.profile-desc .first-name {
+  font-size: 3.5rem;
+  line-height: 3rem;
+  text-transform: lowercase;
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@-webkit-keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.contact-main div.profile div.profile-desc .last-name {
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  font-weight: bolder;
+  line-height: 3rem;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: #e0a80d;
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.contact-main div.profile div.profile-desc p.profile-title {
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  padding: 2rem 0;
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.contact-main div.profile div.profile-social {
+  text-align: center;
+}
+
+section.contact-container div.contact-main div.profile div.profile-social i {
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+section.contact-container div.contact-main div.profile div.profile-social i.fa-github {
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.contact-main div.profile div.profile-social i.fa-linkedin {
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.contact-main div.profile div.profile-social i:hover {
+  color: #e0a80d;
+}
+
+section.contact-container div.contact-main div.profile-card-container {
+  width: 100%;
+}
+
+section.contact-container div.contact-main div.profile-card-container div.profile-card {
+  padding: 1.5rem 1rem;
+}
+
+section.contact-container div.contact-main div.profile-card-container div.profile-card-1 {
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.contact-main div.profile-card-container div.profile-card-2 {
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.contact-main div.profile-card-container div.profile-card-3 {
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+section.contact-container div.contact-main div.profile-card-container div.profile-card-4 {
+  -webkit-animation: flyin 0.75s ease-in forwards;
+          animation: flyin 0.75s ease-in forwards;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+  opacity: 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  section.contact-container .side-desc {
+    display: none !important;
+  }
+  section.contact-container .profile-img-container {
+    text-align: center;
+    display: block !important;
+  }
+  section.contact-container .profile-desc {
+    text-align: center !important;
+  }
+  section.contact-container .profile {
+    text-align: center;
+    padding: 3rem 0 !important;
+  }
+}
+
+section div.portfolio-container {
+  padding: 2rem;
+}
+
+section div.portfolio-container .btn,
+section div.portfolio-container .btn:link,
+section div.portfolio-container .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+section div.portfolio-container .btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 1px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+section div.portfolio-container .btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+section div.portfolio-container .btn:active,
+section div.portfolio-container .btn:focus {
+  outline: none;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 1px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+section div.portfolio-container .btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+section div.portfolio-container *,
+section div.portfolio-container *::after,
+section div.portfolio-container *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+section div.portfolio-container .port-card {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  margin: 2rem auto;
+  width: 16rem;
+  position: relative;
+  height: 20rem;
+}
+
+section div.portfolio-container .card__side {
+  height: 20rem;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+section div.portfolio-container .card__side img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+section div.portfolio-container .card__side--back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background: linear-gradient(-45deg, #555555, #999999);
+}
+
+section div.portfolio-container .port-card:hover .card__side {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+section div.portfolio-container .port-card:hover .card__side--back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+section div.portfolio-container .card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+section div.portfolio-container .card__details ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section div.portfolio-container .card_heading {
+  font-weight: bold;
+  color: white;
+}
+
+section div.portfolio-container .card__details ul li {
+  font-size: 1rem;
+  color: white;
+  padding: 0.1rem;
+}
+
+section div.resume-container {
+  padding: 20px;
+}
+
+section div.resume-container div.resume-timeline {
+  padding: 20px;
+  margin: 20px;
+  border-left: solid 1px #a4a5a6;
+}
+
+section div.resume-container div.resume-timeline div.experience {
+  margin-top: 2rem;
+  position: relative;
+}
+
+section div.resume-container div.resume-timeline div.experience div.timeline-dot {
+  border: solid 5px #2a2a2a;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: -30px;
+  background-color: #e0a80d;
+}
+
+section div.resume-container div.resume-timeline div.experience div.exp-time-range {
+  font-weight: 300;
+  font-size: small;
+}
+
+section div.resume-container div.resume-timeline div.experience div.exp-company {
+  font-size: larger;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+section div.resume-container div.resume-timeline div.exp-desc {
+  margin-top: 1rem;
+}
+
+section div.resume-container div.resume-timeline div.exp-desc p {
+  font-size: medium;
+}
+
+section div.skill-container {
+  padding: 2rem;
+}
+
+section div.skill-container div.skill-item {
+  padding: 1rem;
+}
+
+section div.skill-container div.skill-heading {
+  font-weight: bolder;
+  color: #e0a80d;
+}
+
+section div.side-desc {
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section div.side-desc div.side-desc-text {
+  height: 60px;
+  width: 150px;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  border-bottom: dashed 2px #555555;
+}
+
+@media only screen and (max-width: 992px) {
+  section .side-desc {
+    text-align: left !important;
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: #555555;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    padding-bottom: 2rem !important;
+    background-color: #2e2e2e;
+  }
+  section {
+    background-color: #2a2a2a;
+  }
+}
+
+.alt-bg {
+  background-color: #2c2c2c;
+}
+
+footer {
+  background-color: #2e2e2e;
+  border: solid 2px #2c2c2c;
+  height: 65px;
+  text-align: right;
+  line-height: 60px;
+  padding: 0 5rem;
+}
+/*# sourceMappingURL=styles.css.map */

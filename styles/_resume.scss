@@ -1,0 +1,40 @@
+div.resume-container {
+  padding: 20px;
+  div.resume-timeline {
+    padding: 20px;
+    margin: 20px;
+    border-left: solid 1px $primaryTextColor;
+    div.experience {
+      margin-top: 2rem;
+      position: relative;
+
+      div.timeline-dot {
+        border: solid 5px $tertiaryBGColor;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        left: -30px;
+        background-color: $secondaryTextColor;
+      }
+
+      div.exp-time-range {
+        font-weight: 300;
+        font-size: small;
+      }
+
+      div.exp-company {
+        font-size: larger;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+    }
+
+    div.exp-desc {
+      margin-top: 1rem;
+      p {
+        font-size: medium;
+      }
+    }
+  }
+}

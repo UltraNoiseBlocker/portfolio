@@ -1,0 +1,12 @@
+div.skill-container {
+  padding: 2rem;
+
+  div.skill-item {
+    padding: 1rem;
+  }
+
+  div.skill-heading {
+    font-weight: bolder;
+    color: $secondaryTextColor;
+  }
+}

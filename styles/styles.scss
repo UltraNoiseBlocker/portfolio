@@ -1,0 +1,200 @@
+$primaryBGColor: rgb(46, 46, 46);
+$secondaryBGColor: rgb(44, 44, 44);
+$tertiaryBGColor: rgb(42, 42, 42);
+$primaryTextColor: rgb(164, 165, 166);
+$secondaryTextColor: rgb(224, 168, 13);
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 31.25em) {
+      @content;
+    } // < 500px
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 62em) {
+      @content;
+    } // < 992px
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } // > 1800px
+  }
+}
+
+@mixin flyIn($delayTime) {
+  animation: flyin 0.75s ease-in forwards;
+  animation-delay: $delayTime;
+  opacity: 0;
+  transform: translate(20px, 20px);
+  filter: blur(4px);
+
+  @keyframes flyin {
+    to {
+      filter: blur(0);
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin fadeIn($delayTime) {
+  animation: fadein 0.75s ease-in forwards;
+  animation-delay: $delayTime;
+  opacity: 0;
+  transform: scale(1.5);
+  filter: blur(4px);
+
+  @keyframes fadein {
+    to {
+      filter: blur(0);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+html {
+  font-size: 100%;
+  animation: fadein 2s;
+
+  @include respond(phone) {
+    font-size: 90%; // 1rem = 8px, 8/16 = 50
+  }
+  @include respond(tablet) {
+    font-size: 95%; // 1rem = 9px, 9/16 = 56.25
+  }
+  @include respond(desktop) {
+    font-size: 100%; // 1 rem = 12px, 12/16 = 75
+  }
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato';
+  color: $primaryTextColor;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a,
+a:hover,
+a:active {
+  color: $primaryTextColor;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+  background-color: $primaryBGColor;
+  border: solid 2px $secondaryBGColor;
+  ul {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    li {
+      margin-left: 2rem;
+      display: inline;
+      list-style-type: none;
+    }
+    @media only screen and (max-width: 500px) {
+      padding-right: 2rem;
+    }
+  }
+}
+main {
+  padding-top: 60px;
+}
+.anchor {
+  position: absolute;
+  top: -60px;
+  visibility: hidden;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  background-color: $tertiaryBGColor;
+
+  &.alt-bg div.alt-bg {
+    background-color: $secondaryBGColor;
+  }
+
+  div.side-bg {
+    background-color: $primaryBGColor;
+  }
+
+  div.sect-container {
+    padding: 10px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  hr {
+    height: 1px;
+    background-color: $primaryTextColor;
+  }
+
+  @import './profile';
+  @import './portfolio';
+  @import './resume';
+  @import './skills';
+
+  div.side-desc {
+    padding: 1rem 2rem;
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+    div.side-desc-text {
+      height: 60px;
+      width: 150px;
+      padding: 1rem 0;
+      text-transform: uppercase;
+      border-bottom: dashed 2px rgb(85, 85, 85);
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .side-desc {
+      text-align: left !important;
+      border-style: solid;
+      border-width: 1px 0;
+      border-color: rgb(85, 85, 85);
+      justify-content: flex-start !important;
+      padding-bottom: 2rem !important;
+      background-color: $primaryBGColor;
+    }
+    & {
+      background-color: $tertiaryBGColor;
+    }
+  }
+}
+
+.alt-bg {
+  background-color: $secondaryBGColor;
+}
+
+footer {
+  background-color: $primaryBGColor;
+  border: solid 2px $secondaryBGColor;
+  height: 65px;
+  text-align: right;
+  line-height: 60px;
+  padding: 0 5rem;
+}

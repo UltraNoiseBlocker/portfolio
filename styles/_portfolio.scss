@@ -1,0 +1,115 @@
+div.portfolio-container {
+  padding: 2rem;
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 1px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  }
+
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  .btn:active,
+  .btn:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 1px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  }
+
+  .btn--white {
+    background-color: #fff;
+    color: #777;
+  }
+
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  .port-card {
+    flex: none;
+    margin: 2rem auto;
+    width: 16rem;
+    position: relative;
+    height: 20rem;
+  }
+
+  .card__side {
+    height: 20rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .card__side--back {
+    transform: rotateY(180deg);
+    background: linear-gradient(-45deg, #555555, #999999);
+  }
+
+  .port-card:hover .card__side {
+    transform: rotateY(-180deg);
+  }
+
+  .port-card:hover .card__side--back {
+    transform: rotateY(0);
+  }
+
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  .card__details ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .card_heading {
+    font-weight: bold;
+    color: white;
+  }
+
+  .card__details ul li {
+    font-size: 1rem;
+    color: white;
+    padding: 0.1rem;
+  }
+}

@@ -1,0 +1,117 @@
+&.contact-container {
+  div.side-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: space-around;
+    div.profile-img-container {
+      @include fadeIn(1.8s);
+      padding-bottom: 9rem;
+      img {
+        border-radius: 50%;
+        width: 200px;
+      }
+    }
+  }
+  div.contact-main {
+    min-height: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+
+    div.profile-img-container {
+      width: 100%;
+      display: none;
+      margin-top: 3rem;
+      @include fadeIn(1.8s);
+      img {
+        border-radius: 50%;
+        width: 150px;
+      }
+    }
+
+    div.profile {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 8rem 3rem 0 3rem;
+      div.profile-desc {
+        display: inline-block;
+        text-align: left;
+        .first-name {
+          font-size: 3.5rem;
+          line-height: 3rem;
+          text-transform: lowercase;
+          @include flyIn(0.2s);
+        }
+
+        .last-name {
+          @include flyIn(0.4s);
+          font-weight: bolder;
+          line-height: 3rem;
+          text-transform: uppercase;
+          font-size: 4rem;
+          color: $secondaryTextColor;
+        }
+        p.profile-title {
+          @include flyIn(0.6s);
+          padding: 2rem 0;
+        }
+      }
+
+      div.profile-social {
+        text-align: center;
+        i {
+          &.fa-github {
+            @include flyIn(0.8s);
+          }
+          &.fa-linkedin {
+            @include flyIn(1s);
+          }
+          margin: 0.5rem;
+          cursor: pointer;
+
+          &:hover {
+            color: $secondaryTextColor;
+          }
+        }
+      }
+    }
+    div.profile-card-container {
+      width: 100%;
+      div.profile-card {
+        padding: 1.5rem 1rem;
+      }
+      div.profile-card-1 {
+        @include flyIn(1.2s);
+      }
+      div.profile-card-2 {
+        @include flyIn(1.4s);
+      }
+      div.profile-card-3 {
+        @include flyIn(1.6s);
+      }
+      div.profile-card-4 {
+        @include flyIn(1.8s);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .side-desc {
+      display: none !important;
+    }
+    .profile-img-container {
+      text-align: center;
+      display: block !important;
+    }
+    .profile-desc {
+      text-align: center !important;
+    }
+    .profile {
+      text-align: center;
+      padding: 3rem 0 !important;
+    }
+  }
+}
